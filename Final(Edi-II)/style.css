@@ -1,0 +1,455 @@
+/* -------------------------------------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f0eb; /* Fondo cremoso muy suave, casi blanco roto */
+    color: #4A4A4A; /* Texto gris oscuro cálido */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -----------------------------------------------------Titulos----------------------------------------------------- */
+h1 {
+    font-size: 2.8em;
+    color: #5C4033; /* Marrón oscuro para impacto */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.8em;
+    color: #7B3F00; /* Marrón tierra más vibrante */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Clases para texto específico */
+.inicio {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.2em;
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    margin-bottom: 30px;
+    color: #5C4033;
+}
+
+/*
+ * LAYOUT & CONTAINERS
+ * -------------------------------------------------------------------------- */
+header {
+    background-color: #A0522D; /* Marrón siena, cálido y distintivo */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    color: white; /* Texto blanco para el encabezado */
+    margin: 0;
+}
+
+.nav { /* Si .nav es un contenedor de navegación principal */
+    background-color: #7B3F00; /* Marrón más oscuro para la navegación */
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav a { /* Estilo para los enlaces dentro de la navegación */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #E2B27F; /* Tono más claro de marrón al pasar el ratón */
+}
+
+section { /* Contenedores de contenido o secciones principales */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto 20px auto;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #5C4033; /* Marrón oscuro para el footer */
+    color: white;
+    text-align:center;
+    padding: 20px;
+    margin-top: 10%;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*
+ * FORM ELEMENTS
+ * -------------------------------------------------------------------------- */
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #6C544B; /* Marrón grisáceo para etiquetas */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #D9C3B0; /* Borde suave de tono tierra */
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #A0522D; /* Marrón siena al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(160, 82, 45, 0.25); /* Sombra semitransparente del marrón */
+    outline: none;
+}
+
+/* Estilos para el botón de submit */
+input[type="submit"] {
+    background-color: #8B4513; /* Marrón saddle, fuerte y terroso */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #6B2E05; /* Marrón más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+/* Estilos para el input general, si no tiene tipo específico */
+input {
+    border-bottom: 1px solid #C5B09B;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+}
+
+
+/*
+ * LINKS & BUTTONS
+ * -------------------------------------------------------------------------- */
+/* Botones de acción general (aplicar a enlaces que parezcan botones) */
+.button, .a {
+    background-color: #A0522D; /* Marrón siena para botones de acción */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover, .a:hover {
+    background-color: #8B4513; /* Marrón saddle al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.links {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.links a:not(.button) { /* Enlaces que no son botones */
+    color: #A0522D; /* Marrón siena para enlaces de texto */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links a:not(.button):hover {
+    text-decoration: underline;
+    color: #7B3F00;
+}
+
+
+/* Estilos para el link "Iniciar Sesión" */
+.iniciar {
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #f7f7f7;
+    border: 2px solid #A0522D;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.iniciar:hover {
+   
+    background-color: #A0522D;
+    color: #9d3505;
+}
+
+/* Clases de login - Revisa tu HTML para aplicar */
+.formulario {
+    text-align: center;
+}
+
+.l, .login {
+    background-color: #f9f9f9; /* Usa el marrón primario */
+    color: rgb(139, 135, 135);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.na { /* Si es un enlace de navegación activa */
+    background-color: #7B3F00; /* Un marrón más oscuro */
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.select{
+    width: 25px;
+}
+
+/*
+ * CRUD BUTTONS (Modernized with Browns)
+ * -------------------------------------------------------------------------- */
+.crud-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create, .delete, .update, .read {
+    padding: 25px;
+    width: 150px;
+    height: 100px;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.create {
+    background-color: #8B4513; /* Marrón saddle para crear */
+}
+.delete {
+    background-color: #B22222; /* Rojo ladrillo para eliminar */
+}
+.update {
+    background-color: #A0522D; /* Marrón siena para actualizar */
+}
+.read {
+    background-color: #D2B48C; /* Marrón tan, más claro, con texto oscuro */
+    color: #333;
+}
+
+.create:hover, .delete:hover, .update:hover, .read:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*
+ * GALLERY STYLES
+ * -------------------------------------------------------------------------- */
+.slideshow-container {
+    max-width: 900px;
+    max-height: 550px;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Estilos para los puntos de navegación */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.table{
+
+    width: 80%; 
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+ 
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #A0522D;
+    color: white;
+}
+.select{
+    width: 100%;
+    height: 20%;
+}

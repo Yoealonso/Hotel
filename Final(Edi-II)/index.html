@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reservas de hotel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  <header>
+        <a class="iniciar" href="login.php">Iniciar sesión</a>
+    <h3 class="inicio">HOTEL BELLA VISTA</h3>
+
+  </header>
+
+  <nav class="nav">
+    <a href="#nosotros" style="margin-right: 40px;" class="na">Sobre Nosotros</a>   
+    <a href="#reserva" style="margin-right: 40px;" class="na">Hace tu reserva</a>
+    <a href="#footer" class="na">Desarrollo</a>
+  </nav>
+
+  
+  
+    <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Imagenes/imagen.webp" style="width:90%" height="150%">
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Imagenes/imagen2.jpg" style="width:90%" height="120%">
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Imagenes/imagen3.jpg" style="width:90%" height="120%">
+
+  </div>
+
+ <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Imagenes/imagen4.jpg" style="width:90%" height="120%">
+
+  </div>
+ <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Imagenes/imagen5.jpg" style="width:90%" height="120%">
+  
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6/ 6</div>
+    <img src="Imagenes/imagen6.jpg" style="width:90%" height="120%">
+  
+  </div>
+
+
+
+<!-- The dots/circles 
+<div style="text-align:center">
+   <span class="dot" onclick="currentSlide(1)"></span> 
+   <span class="dot" onclick="currentSlide(2)"></span> 
+   <span class="dot" onclick="currentSlide(3)"></span> 
+   <span class="dot" onclick="currentSlide(4)"></span> 
+   <span class="dot" onclick="currentSlide(5)"></span> 
+   <span class="dot" onclick="currentSlide(6)"></span> 
+   <span class="dot" onclick="currentSlide(7)"></span> 
+   <span class="dot" onclick="currentSlide(8)"></span> 
+   <span class="dot" onclick="currentSlide(9)"></span> 
+</div>-->
+<head>
+
+	<script>
+  	var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1} 
+        slides[slideIndex-1].style.display = "block"; 
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+	</script>
+
+
+
+ 
+
+<section>
+    <article id="nosotros">
+    <h2>SOBRE NOSOTROS</h2>
+    <p>Hotel "Bella vista", unico en ofrecer una abanico de opciones en servicios y habitaciones.<br>Contamos con habitaciones sencillas hasta suites de lujo, todas con una hermosa vista al mar y a pasos de este</p>
+    </article>
+</section>
+
+ <section>
+    <article id="reserva">
+    <h2>CREA TU RESERVA</h2>
+    <p>No dudes más y crea tus proximas vacaciones con nosotros, ofrecemos una experiencia unica.<br>
+        Registrate haciendo clik <a href="login.php">aqui</a> y planifica tus
+        proximas vacaciones.
+    </p>
+    </article>
+</section>
+
+  <footer id="footer">
+    <p>Carrera: Tecnicatura superior en análisis,<br> desarrollo y programación de
+                aplicaciones</p>
+    <p>Materia: EDI II</p>
+    <p>Profesor: Triaca, Mauro - Gómez, Mauro</p>
+    <p>Alumnos: Alonso Yoel Ezequiel</p>
+  </footer>
+</body>
+</html>
